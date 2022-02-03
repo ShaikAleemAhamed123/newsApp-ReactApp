@@ -1,11 +1,13 @@
 import React, { Component } from 'react'
 
-export class NewsItem extends Component {
+// export class NewsItem extends Component {
 
 
-    render() {
 
-        let { title, description, imageurl, newsurl, author, date,source} = this.props;
+    const NewsItem=(props)=>{
+    // render() {
+
+        let { title, description, imageurl, newsurl, author, date,source} = props;
         return (
             <>
 
@@ -31,7 +33,8 @@ export class NewsItem extends Component {
 
 
         )
+    // }
     }
-}
+// }
 
 export default NewsItem
