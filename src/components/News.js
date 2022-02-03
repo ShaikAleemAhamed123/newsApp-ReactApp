@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import NewsItem from './NewsItem'
-import Load from './Load'
+import Loader from './Loader'
 import PropTypes from 'prop-types'
 import InfiniteScroll from "react-infinite-scroll-component"
 
@@ -153,12 +153,12 @@ export class News extends Component {
                  
                     <h2 className=" my-4 text-center">newsMonkey-Top {this.firstLetterCapitalise(this.props.category)} Headlines</h2>
 
-                    {this.state.loading && <Load/>}
+                    {this.state.loading && <Loader/>}
                     <InfiniteScroll
                         dataLength={this.state.articles.length} //This is important field to render the next data
                         next={this.fetchMoreData}
                         hasMore={this.state.articles.length !== this.state.totalResults}
-                        loader={<Load/>}
+                        loader={<Loader/>}
                     >
                         <div className="container">
                             <div className="row">
