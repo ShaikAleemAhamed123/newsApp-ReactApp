@@ -68,6 +68,8 @@ const News=(props)=>{
 
     useEffect(()=>{
         updateNews();
+        document.title = `${firstLetterCapitalise(props.category)}-newsMonkey`;
+
     },[])
 
     // const componentDidMount=async ()=> {
